@@ -1,0 +1,75 @@
+:root {
+  /* ---- Color: "Arctic Arena" — floodlit outdoor ice rink at night ---- */
+  --ink: #0B1B2B;           /* rink-night navy, primary background */
+  --ink-raised: #122A40;    /* card surfaces */
+  --ink-line: #1E3A52;      /* hairlines / borders on dark */
+  --ice: #5FD3F3;           /* icestock-blue accent, links, active states */
+  --ice-dim: #2E5A6E;
+  --frost: #EAF6FB;         /* primary text on dark */
+  --frost-dim: #9FB8C9;     /* secondary text on dark */
+  --signal: #FF7A45;        /* live / scoring / call-to-action accent */
+  --signal-dim: #7A3A22;
+  --success: #4ADE80;
+  --danger: #F26D6D;
+  --paper: #F5F9FB;         /* light-mode surfaces (forms, tables) */
+  --paper-line: #D8E4EA;
+  --charcoal: #16232E;
+
+  /* ---- Type ---- */
+  --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
+
+  /* ---- Scale ---- */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --shadow-card: 0 8px 24px rgba(5, 15, 25, 0.35);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--frost);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  line-height: 1.02;
+  margin: 0;
+}
+h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+p { line-height: 1.55; color: var(--frost-dim); margin: 0 0 var(--space-3); }
+.mono { font-family: var(--font-mono); }
+
+a { color: var(--ice); text-decoration: none; }
+button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
